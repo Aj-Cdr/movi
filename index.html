@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>SPA - MOV</title>
+  <meta name="description"
+    content="Get movie & Tv Shows stream by IMDB, Best Video Api, the best streaming movies API in 2021. SPA - MOVS crawls various websites and search engines to find movie streaming links which are then stored into our database and served to you through our API service.">
+  <meta name="author" content="© SPA - MOV #2022">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="manifest" href="./site.webmanifest">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <style>
+    .hide-scroll {
+      overflow-y: scroll;
+    }
+
+    .hide-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    .hide-scroll {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+
+</head>
+
+<body bgcolor="black" class="hide-scroll">
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container" style="margin-top: 1.5%;">
+    <div>
+      <h1 style="color: white;"><b>SPA - MOV</b></h1>
+      <h2 style="color: white;">
+        <p>Get movie & Tv Shows stream by IMDB,<br>
+          TMDB, Title/Year Best Video Api,<br>
+          the best streaming movies API in 2022.<br></p>
+      </h2>
+    </div>
+    <div class="row">
+      <div class="six columns">
+        <h2 style="color:white">Imdb Id - Movies</h2>
+        <form>
+          <button type="button" value="Movies" id="movie-button" class="button-primary">Movies</button>
+          <button type="button" value="TV Shows" id="tv-shows-button" class="button-primary">TV
+            Shows</button>
+        </form>
+
+        <div> <iframe src="https://www.2embed.ru/embed/imdb/movie?id=tt2953050"
+            style="border-radius: 10px; margin-top: -5%;" id="movie-screen" allowfullscreen
+            class="u-full-width"></iframe></div>
+        <form>
+
+          <div><input name="imdb-id" id="movie-id" value="" style="color:white; background-color: black;" type="text"
+              placeholder="Enter Imdb Id: tt0903747" class="u-full-width">
+          </div>
+
+          <div><button type="button" id="movie-submit" onclick="getlink()"
+              class="button-primary u-full-width">Submit</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="./imdb.js"></script>
+  <script>
+    function getlink() {
+      let movie_id = document.getElementById("movie-id").value
+      let link = "https://www.2embed.ru/embed/imdb/movie?id=" + movie_id
+      document.getElementById("movie-screen").src = link
+    }
+  </script>
+</body>
+
+</html>
