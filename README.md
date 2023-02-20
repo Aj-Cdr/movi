@@ -1,4 +1,5 @@
 # movi - Movie Streaming Website... Link: https://mov1.netlify.app/
+# Goodle Drive Hosted - https://movix2723aj-cdrgithubs.on.drv.tw/www.movi.com/
 Get movie & Tv Shows stream by IMDB, ID, Title/Year Best Video Api, the best streaming movies API in 2022. movi crawls various websites and search engines to find movie streaming links which are then stored into our database and served to you through our API service. Newly optomized website that is responsible for mobile, pc, laptop and tablet devices. Also offers a minimal and elegant, UI and UX for the user to watch and stream movies and tv shows.
 # How To Use movi: 
 In order to use this website to watch free movies and tv shows you need to first go to the official imdb website -> link: https://www.imdb.com/ Next search up your favourite movie or tv show that you want today in the search bar. The imdb search bar will look like this  -----------------> :
